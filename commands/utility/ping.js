@@ -6,7 +6,7 @@ const { channelId, messageId, roleName } = require('../../config.json');
 
 const data = new SlashCommandBuilder()
 	.setName('add-tod')
-	.setDescription('Sends a random gif!')
+	.setDescription('Add NM tod')
 	.addStringOption(option =>
 		option.setName('monster')
 			.setDescription('The notorious monster')
