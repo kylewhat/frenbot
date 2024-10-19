@@ -1,25 +1,5 @@
 [
     {
-        "name": "🌭 Behemoth 🌭",
-        "epochTod": 1729308170,
-        "displayText": "",
-        "lastDeathDay": 4,
-        "respawnTimeMin": 79200,
-        "respawnTimeMax": 82800,
-        "respawnTimeMinEpoch": 1729387370,
-        "respawnTimeMaxEpoch": 1729390970
-    },
-    {
-        "name": "🩸 Bloodsucc 🩸",
-        "epochTod": 1729103694,
-        "displayText": "",
-        "lastDeathDay": null,
-        "respawnTimeMin": 259216,
-        "respawnTimeMax": null,
-        "respawnTimeMinEpoch": 1729362910,
-        "respawnTimeMaxEpoch": null
-    },
-    {
         "name": "🐉 Fafnir 🐉",
         "epochTod": 1729358859,
         "displayText": "",
@@ -30,17 +10,27 @@
         "respawnTimeMaxEpoch": 1729441659
     },
     {
-        "name": "🧊 Jormzhugand 🧊",
-        "epochTod": 1728989127,
+        "name": "🌭 Behemoth 🌭",
+        "epochTod": 1729308170,
         "displayText": "",
-        "lastDeathDay": null,
-        "respawnTimeMin": 302416,
-        "respawnTimeMax": 388816,
-        "respawnTimeMinEpoch": 1729291543,
-        "respawnTimeMaxEpoch": 1729377943
+        "lastDeathDay": 4,
+        "respawnTimeMin": 79200,
+        "respawnTimeMax": 82800,
+        "respawnTimeMinEpoch": 1729387370,
+        "respawnTimeMaxEpoch": 1729390970
     },
     {
-        "name": "🦀 King Artho 🦀",
+        "name": "🐢 Adamantoise 🐢",
+        "epochTod": 1729334495,
+        "displayText": "",
+        "lastDeathDay": 2,
+        "respawnTimeMin": 79200,
+        "respawnTimeMax": 82800,
+        "respawnTimeMinEpoch": 1729413695,
+        "respawnTimeMaxEpoch": 1729417295
+    },
+    {
+        "name": "🦀 King Crab 🦀",
         "epochTod": 1729335526,
         "displayText": "",
         "lastDeathDay": null,
@@ -50,16 +40,6 @@
         "respawnTimeMaxEpoch": 1729418342
     },
     {
-        "name": "🦂 King Vinegarroon 🦂",
-        "epochTod": 1729294671,
-        "displayText": null,
-        "lastDeathDay": null,
-        "respawnTimeMin": 75616,
-        "respawnTimeMax": null,
-        "respawnTimeMinEpoch": 1729370287,
-        "respawnTimeMaxEpoch": null
-    },
-    {
         "name": "⚔️ Shikigami Weapon ⚔️",
         "epochTod": 1729311485,
         "displayText": null,
@@ -67,6 +47,16 @@
         "respawnTimeMin": 75616,
         "respawnTimeMax": null,
         "respawnTimeMinEpoch": 1729387101,
+        "respawnTimeMaxEpoch": null
+    },
+    {
+        "name": "🦂 King Vinegarroon 🦂",
+        "epochTod": 1729294671,
+        "displayText": null,
+        "lastDeathDay": null,
+        "respawnTimeMin": 75616,
+        "respawnTimeMax": null,
+        "respawnTimeMinEpoch": 1729370287,
         "respawnTimeMaxEpoch": null
     },
     {
@@ -80,6 +70,16 @@
         "respawnTimeMaxEpoch": 1729405816
     },
     {
+        "name": "🩸 Bloodsucc 🩸",
+        "epochTod": 1729103694,
+        "displayText": "",
+        "lastDeathDay": null,
+        "respawnTimeMin": 259216,
+        "respawnTimeMax": null,
+        "respawnTimeMinEpoch": 1729362910,
+        "respawnTimeMaxEpoch": null
+    },
+    {
         "name": "🔥 Tiamat 🔥",
         "epochTod": 1729220470,
         "displayText": "🔥 Tiamat Trouncers 🔥",
@@ -90,14 +90,14 @@
         "respawnTimeMaxEpoch": 1729609286
     },
     {
-        "name": "🐢 Turtle 🐢",
-        "epochTod": 1729334495,
+        "name": "🧊 Jormzhugand 🧊",
+        "epochTod": 1728989127,
         "displayText": "",
-        "lastDeathDay": 2,
-        "respawnTimeMin": 79200,
-        "respawnTimeMax": 82800,
-        "respawnTimeMinEpoch": 1729413695,
-        "respawnTimeMaxEpoch": 1729417295
+        "lastDeathDay": null,
+        "respawnTimeMin": 302416,
+        "respawnTimeMax": 388816,
+        "respawnTimeMinEpoch": 1729291543,
+        "respawnTimeMaxEpoch": 1729377943
     },
     {
         "name": "💜 Vrtra 💜",

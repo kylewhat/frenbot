@@ -5,30 +5,21 @@ const path = './tods.json';
 const { roleName } = require('../../config.json');
 
 const data = new SlashCommandBuilder()
-	.setName('post-tods')
+	.setName('show-tods')
 	.setDescription('Post tods in chronological order');
 
 module.exports = {
 	data,
-	async execute(interaction, client) {
-		const memberHasRole = interaction.member.roles.cache.some(role => role.name === roleName) || interaction.member.roles.cache.some(role => role.name === 'admin');
-
-		if (!memberHasRole) {
-			interaction.reply({
-				content: 'Not very demure or mindful of you to attempt to post without permissions!',
-				ephemeral: true
-			});
-			return;
-		}
-	
+	async execute(interaction) {
 		try {
 			const result = await getMonsterData();
-			await interaction.reply({content: result});
+			await interaction.reply({content: result, ephemeral: true});
 		} catch (err) {
 			console.error("Error:", err);
 		}
 	},
 };
+
 async function getMonsterData() {
     try {
         // Read the existing JSON file

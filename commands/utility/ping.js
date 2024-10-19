@@ -16,12 +16,12 @@ const data = new SlashCommandBuilder()
 				{ name: '🩸 Bloodsucc 🩸', value: '🩸 Bloodsucc 🩸' },
 				{ name: '🐉 Fafnir 🐉', value: '🐉 Fafnir 🐉' },
 				{ name: '🧊 Jormzhugand 🧊', value: '🧊 Jormzhugand 🧊' },
-				{ name: '🦀 King Artho 🦀', value: '🦀 King Artho 🦀' },
+				{ name: '🦀 King Crab 🦀', value: '🦀 King Crab 🦀' },
 				{ name: '🦂 King Vinegarroon 🦂', value: '🦂 King Vinegarroon 🦂' },
 				{ name: '⚔️ Shikigami Weapon ⚔️', value: '⚔️ Shikigami Weapon ⚔️' },
 				{ name: '🪶 Simurgh 🪶', value: '🪶 Simurgh 🪶' },
 				{ name: '🔥 Tiamat 🔥', value: '🔥 Tiamat 🔥' },
-				{ name: '🐢 Turtle 🐢', value: '🐢 Turtle 🐢' },
+				{ name: '🐢 Adamantoise 🐢', value: '🐢 Adamantoise 🐢' },
 				{ name: '💜 Vrtra 💜', value: '💜 Vrtra 💜' },
 	))
 	.addStringOption(option =>
@@ -143,18 +143,8 @@ async function getMonsterData() {
         // Get the current time
         const now = moment();
 
-        // Sort monsters based on respawnTimeMinEpoch
-        monsters.sort((a, b) => {
-            // Calculate time differences
-            const respawnA = a.respawnTimeMaxEpoch ? moment.unix(a.respawnTimeMaxEpoch) : moment.unix(a.respawnTimeMinEpoch);
-            const respawnB = b.respawnTimeMaxEpoch ? moment.unix(b.respawnTimeMaxEpoch) : moment.unix(b.respawnTimeMinEpoch);
-
-            // Compare respawn times
-            return respawnA.isBefore(now) - respawnB.isBefore(now) || respawnA.diff(respawnB);
-        });
-
         // String to collect all formatted outputs
-        let allFormattedOutput = '';
+        let allFormattedOutput = '----------------------------------------------------------\n';
 
         // Iterate over each monster and display the formatted information
         monsters.forEach(monster => {
@@ -181,6 +171,11 @@ async function getMonsterData() {
 
             if (monster.respawnTimeMin === 302416) {
                 formattedOutput += ` force <t:${monster.respawnTimeMaxEpoch}:R>`;
+            }
+
+            // Seperate NMs after "Adamantoise" & "Bloodsucc"
+            if (monster.name === "🐢 Adamantoise 🐢" || monster.name === "🩸 Bloodsucc 🩸") {
+                formattedOutput += `\n\n----------------------------------------------------------`;
             }
 
             // Add the formatted output to the string
