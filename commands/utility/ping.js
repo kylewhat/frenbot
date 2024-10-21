@@ -57,7 +57,7 @@ module.exports = {
 		if (
 			monsterUpdated === '🌭 Behemoth 🌭' ||
 			monsterUpdated === '🐉 Fafnir 🐉' ||
-			monsterUpdated === '🐢 Adamantoise  🐢'
+			monsterUpdated === '🐢 Adamantoise 🐢'
 		) {
 			if (!deathDay) {
 				interaction.reply({
