@@ -80,7 +80,7 @@ module.exports = {
 		}
 
 		const tod = moment.tz(todValue, "MM/DD/YYYY hh:mm:ss A", "America/Chicago");
-		const deathDayDisplayText = deathDay ? ` (day ${deathDay})` : '';
+		const deathDayDisplayText = deathDay !== null && deathDay !== undefined ? ` (day ${deathDay})` : '';
 		const randomEmojis = ['🍆', '🔥', '💋', '✅', '🚬', '👀', '🍑', '🥫', '🫄', '🤡', '🔪', '🔊', '👉👈', '👁️👄👁️', '💪', '🌈', '🥋', '🎮'];
 		const randomEmoji = randomEmojis[Math.floor(Math.random() * randomEmojis.length)];
 
