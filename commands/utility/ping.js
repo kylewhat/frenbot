@@ -149,10 +149,10 @@ async function getMonsterData() {
         // Iterate over each monster and display the formatted information
         monsters.forEach(monster => {
             let monsterName = monster.displayText || monster.name;
-            if (monster.lastDeathDay) {
-                const displayDeathDay = monster.lastDeathDay ? ` Day ${monster.lastDeathDay + 1} ` : "";
-                monsterName = insertBeforeLastChar(monsterName, displayDeathDay);
-            }
+			if (monster.lastDeathDay !== null && monster.lastDeathDay !== undefined) {
+				const displayDeathDay = ` Day ${monster.lastDeathDay + 1} `;
+				monsterName = insertBeforeLastChar(monsterName, displayDeathDay);
+			}
 
             // Check if respawnTimeMax is in the past
             let formattedOutput = `${monsterName}\n`;
