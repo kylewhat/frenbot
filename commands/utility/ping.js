@@ -59,7 +59,7 @@ module.exports = {
 			monsterUpdated === '🐉 Fafnir 🐉' ||
 			monsterUpdated === '🐢 Adamantoise 🐢'
 		) {
-			if (!deathDay) {
+			if (deathDay === null || deathDay === undefined) {
 				interaction.reply({
 					content: `💋 Day number required! Time of death not updated. 💋`,
 					ephemeral: true
