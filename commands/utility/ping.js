@@ -140,9 +140,6 @@ async function getMonsterData() {
         const data = await fs.readFile(path, 'utf8');
         const monsters = JSON.parse(data);
 
-        // Get the current time
-        const now = moment();
-
         // String to collect all formatted outputs
         let allFormattedOutput = '----------------------------------------------------------\n';
 
