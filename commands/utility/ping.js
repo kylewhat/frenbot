@@ -61,7 +61,7 @@ module.exports = {
 		) {
 			if (deathDay === null || deathDay === undefined) {
 				interaction.reply({
-					content: `💋 Day number required! Time of death not updated. 💋`,
+					content: `💋 Day number required! Time of death not updated. https://www.youtube.com/watch?v=jVBsM8CM0AE 💋`,
 					ephemeral: true
 				});
 				return;
