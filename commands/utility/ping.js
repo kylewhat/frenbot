@@ -12,6 +12,7 @@ const data = new SlashCommandBuilder()
 			.setDescription('The notorious monster')
 			.setRequired(true)
 			.addChoices(
+				{ name: '🐢 Adamantoise 🐢', value: '🐢 Adamantoise 🐢' },
 				{ name: '🌭 Behemoth 🌭', value: '🌭 Behemoth 🌭' },
 				{ name: '🩸 Bloodsucc 🩸', value: '🩸 Bloodsucc 🩸' },
 				{ name: '🐉 Fafnir 🐉', value: '🐉 Fafnir 🐉' },
@@ -21,7 +22,6 @@ const data = new SlashCommandBuilder()
 				{ name: '⚔️ Shikigami Weapon ⚔️', value: '⚔️ Shikigami Weapon ⚔️' },
 				{ name: '🪶 Simurgh 🪶', value: '🪶 Simurgh 🪶' },
 				{ name: '🔥 Tiamat 🔥', value: '🔥 Tiamat 🔥' },
-				{ name: '🐢 Adamantoise 🐢', value: '🐢 Adamantoise 🐢' },
 				{ name: '💜 Vrtra 💜', value: '💜 Vrtra 💜' },
 	))
 	.addStringOption(option =>
@@ -31,7 +31,7 @@ const data = new SlashCommandBuilder()
 	)
 	.addIntegerOption(option =>
 		option.setName('day')
-			.setDescription('Days since HQ - If today is day three, enter 3')
+			.setDescription('Days since HQ - If today is day three, enter 3, if HQ king died enter 0')
 			.setRequired(false)
 			.setMaxValue(18)
 			.setMinValue(0)
