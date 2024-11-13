@@ -151,8 +151,12 @@ async function getMonsterData() {
 				monsterName = insertBeforeLastChar(monsterName, displayDeathDay);
 			}
 
-			if (monsterName === "⚔️ Shikigami Weapon ⚔️" && Math.random() < 0.05) {
+			if (monsterName === "⚔️ Shikigami Weapon ⚔️" && Math.random() < 0.04) {
 				monsterName = "⚔️ Shikishima Weapon ⚔️";
+			}
+
+			if (monsterName === "🔥 Tiamat Trouncers 🔥" && Math.random() < 0.01) {
+				monsterName = "🔥 Tiamart Trouncers 🔥";
 			}
 
             // Check if respawnTimeMax is in the past
