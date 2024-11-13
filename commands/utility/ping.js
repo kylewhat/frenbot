@@ -151,9 +151,10 @@ async function getMonsterData() {
 				monsterName = insertBeforeLastChar(monsterName, displayDeathDay);
 			}
 
-			if(monsterName === "⚔️ Shikigami Weapon ⚔️"){
+			if (monsterName === "⚔️ Shikigami Weapon ⚔️" && Math.random() < 0.05) {
 				monsterName = "⚔️ Shikishima Weapon ⚔️";
 			}
+
             // Check if respawnTimeMax is in the past
             let formattedOutput = `${monsterName}\n`;
             let todNeedsUpdated = monster.respawnTimeMaxEpoch && (moment().unix() > monster.respawnTimeMaxEpoch);
