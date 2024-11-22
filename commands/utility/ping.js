@@ -151,8 +151,12 @@ async function getMonsterData() {
 				monsterName = insertBeforeLastChar(monsterName, displayDeathDay);
 			}
 
-			if (monsterName === "⚔️ Shikigami Weapon ⚔️" && Math.random() < 0.04) {
+			if (monsterName === "⚔️ Shikigami Weapon ⚔️" && Math.random() < 0.05) {
 				monsterName = "⚔️ <@209114565601001472> Weapon ⚔️";
+			}
+			
+			if (monsterName === "🐉 Fafnir 🐉" && Math.random() < 0.05) {
+				monsterName = "🐉 <@192037539622813696>fnir 🐉";
 			}
 
 			if (monsterName === "🔥 Tiamat Trouncers 🔥" && Math.random() < 0.01) {
