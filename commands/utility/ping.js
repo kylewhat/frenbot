@@ -152,12 +152,16 @@ async function getMonsterData() {
 			}
 
 			if (monsterName === "⚔️ Shikigami Weapon ⚔️" && Math.random() < 0.04) {
-				monsterName = "⚔️ Shikishima Weapon ⚔️";
+				monsterName = "⚔️ <@209114565601001472> Weapon ⚔️";
 			}
 
 			if (monsterName === "🔥 Tiamat Trouncers 🔥" && Math.random() < 0.01) {
 				monsterName = "🔥 Tiamart Trouncers 🔥";
 			}
+			
+			// if(date.getMonth() === 3 && date.getDate() === 1){
+			// 	monsterName = aprilFools(monsterName);
+			// }
 
             // Check if respawnTimeMax is in the past
             let formattedOutput = `${monsterName}\n`;
@@ -192,6 +196,35 @@ async function getMonsterData() {
     } catch (err) {
         console.error("Error:", err);
         throw err; // Rethrow the error for the caller to handle
+    }
+}
+
+function aprilFools(monsterName){
+	switch (monsterName) {
+        case "🐉 Fafnir 🐉":
+            return "🐉 Darters 🐉";
+        case "🌭 Behemoth 🌭":
+            return "🌭 Behemoth the Supreme Hotdog 🌭";
+        case "🔥 Tiamat Trouncers 🔥":
+            return "🔥 Hot Booty Dragon 🔥";
+        case "🐢 Adamantoise 🐢":
+            return "🐢 Adamantoise the Speedy Shell 🐢";
+        case "🦀 King Crab 🦀":
+            return "🦀 Arcavi has really bad gear 🦀";
+        case "⚔️ Shikigami Weapon ⚔️":
+            return "⚔️ SHIKISHIMA WEAPON LOL!!! get it? <@209114565601001472> (lmao) ⚔️";
+        case "🦂 King Vinegarroon 🦂":
+            return "🦂 King Vinegarroon the Tangy Terror 🦂";
+        case "🪶 Simurgh 🪶":
+            return "🪶 Simurgh the Feathered Fantastique 🪶";
+        case "🩸 Bloodsucc 🩸":
+            return "🩸 Succ me 🩸";
+        case "🔥 Tiamat 🔥":
+            return "🔥 Tiamart 🔥";
+        case "🧊 Jormzhugand 🧊":
+            return "🧊 Stupid gosh darn heckin dragon 🧊";
+        case "💜 Vrtra Vanquishers 💜":
+            return "💜  💜";
     }
 }
 
