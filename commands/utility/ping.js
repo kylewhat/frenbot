@@ -156,7 +156,7 @@ async function getMonsterData() {
 			}
 			
 			if (monsterName === "🐉 Fafnir 🐉" && Math.random() < 0.05) {
-				monsterName = "🐉 <@192037539622813696>fnir 🐉";
+				monsterName = "🐉 Faefnir 🐉";
 			}
 
 			if (monsterName === "🔥 Tiamat Trouncers 🔥" && Math.random() < 0.01) {
