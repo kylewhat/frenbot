@@ -19,6 +19,7 @@ const data = new SlashCommandBuilder()
 				{ name: '🧊 Jormzhugand 🧊', value: '🧊 Jormzhugand 🧊' },
 				{ name: '🦀 King Crab 🦀', value: '🦀 King Crab 🦀' },
 				{ name: '🦂 King Vinegarroon 🦂', value: '🦂 King Vinegarroon 🦂' },
+				{ name: '🦂 Serket 🦂', value: '🦂 Serket 🦂' },
 				{ name: '⚔️ Shikigami Weapon ⚔️', value: '⚔️ Shikigami Weapon ⚔️' },
 				{ name: '🪶 Simurgh 🪶', value: '🪶 Simurgh 🪶' },
 				{ name: '🔥 Tiamat 🔥', value: '🔥 Tiamat 🔥' },
@@ -81,7 +82,7 @@ module.exports = {
 
 		const tod = moment.tz(todValue, "MM/DD/YYYY hh:mm:ss A", "America/Chicago");
 		const deathDayDisplayText = deathDay !== null && deathDay !== undefined ? ` (day ${deathDay})` : '';
-		const randomEmojis = ['🍆', '🔥', '💋', '✅', '🚬', '👀', '🍑', '🥫', '🫄', '🤡', '🔪', '🔊', '👉👈', '👁️👄👁️', '💪', '🌈', '🥋', '🎮'];
+		const randomEmojis = ['🍆', '🔥', '💋', '✅', '🚬', '🍑', '🥫', '🫄', '🤡', '🔪', '🔊', '👉👈', '👁️👄👁️', '💪', '🌈', '🥋', '🎮'];
 		const randomEmoji = randomEmojis[Math.floor(Math.random() * randomEmojis.length)];
 
 		await interaction.reply(`> ${randomEmoji} Updated ${monsterUpdated}${deathDayDisplayText} time of death: <t:${tod.unix()}:T>`);
@@ -162,6 +163,10 @@ async function getMonsterData() {
 			if (monsterName === "🔥 Tiamat Trouncers 🔥" && Math.random() < 0.01) {
 				monsterName = "🔥 Tiamart Trouncers 🔥";
 			}
+
+			if (monsterName === "🦂 Serket 🦂" && Math.random() < 0.01) {
+				monsterName = "💃 Twerk It 💃";
+			}
 			
 			// if(date.getMonth() === 3 && date.getDate() === 1){
 			// 	monsterName = aprilFools(monsterName);
@@ -206,7 +211,7 @@ async function getMonsterData() {
 function aprilFools(monsterName){
 	switch (monsterName) {
         case "🐉 Fafnir 🐉":
-            return "🐉 Darters 🐉";
+            return "🪰🪰🐉🪰🪰 Dartners 🪰🪰🐉🪰🪰";
         case "🌭 Behemoth 🌭":
             return "🌭 Behemoth the Supreme Hotdog 🌭";
         case "🔥 Tiamat Trouncers 🔥":

@@ -60,6 +60,16 @@
         "respawnTimeMaxEpoch": null
     },
     {
+        "name": "🦂 Serket 🦂",
+        "epochTod": 1752353670,
+        "displayText": null,
+        "lastDeathDay": null,
+        "respawnTimeMin": 79216,
+        "respawnTimeMax": 82816,
+        "respawnTimeMinEpoch": 1752432886,
+        "respawnTimeMaxEpoch": 1752436486
+    },
+    {
         "name": "🪶 Simurgh 🪶",
         "epochTod": 1729323000,
         "displayText": null,
