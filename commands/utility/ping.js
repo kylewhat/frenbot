@@ -142,7 +142,7 @@ async function getMonsterData() {
         const monsters = JSON.parse(data);
 
         // String to collect all formatted outputs
-        let allFormattedOutput = '----------------------------------------------------------\n';
+        let allFormattedOutput = '';
 
         // Iterate over each monster and display the formatted information
         monsters.forEach(monster => {
@@ -164,9 +164,6 @@ async function getMonsterData() {
 				monsterName = "🔥 Tiamart Trouncers 🔥";
 			}
 
-			if (monsterName === "🦂 Serket 🦂" && Math.random() < 0.01) {
-				monsterName = "💃 Twerk It 💃";
-			}
 			
 			// if(date.getMonth() === 3 && date.getDate() === 1){
 			// 	monsterName = aprilFools(monsterName);
@@ -212,20 +209,22 @@ function aprilFools(monsterName){
 	switch (monsterName) {
         case "🐉 Fafnir 🐉":
             return "🪰🪰🐉🪰🪰 Dartners 🪰🪰🐉🪰🪰";
-        case "🌭 Behemoth 🌭":
-            return "🌭 Behemoth the Supreme Hotdog 🌭";
+        case "🪰🪰 Behemoth 🪰🪰":
+            return "🤣 Teeheemoth 😆";
         case "🔥 Tiamat Trouncers 🔥":
-            return "🔥 Hot Booty Dragon 🔥";
+            return "🐑 Desantine Trounched This 🐑";
         case "🐢 Adamantoise 🐢":
-            return "🐢 Adamantoise the Speedy Shell 🐢";
+            return "🐢 LWNQ 🐢";
         case "🦀 King Crab 🦀":
             return "🦀 Arcavi has really bad gear 🦀";
         case "⚔️ Shikigami Weapon ⚔️":
-            return "⚔️ SHIKISHIMA WEAPON LOL!!! get it? <@209114565601001472> (lmao) ⚔️";
-        case "🦂 King Vinegarroon 🦂":
-            return "🦂 King Vinegarroon the Tangy Terror 🦂";
+            return "⚔️ SHIKISHIMA WEAPON LOL!!! get it? <@209114565601001472> (lmao) <call4> ⚔️";
+		case "🦂 King Vinegarroon 🦂":
+			return "🦂 Serkets Cousin 🦂";
+		case "🦂 Serket 🦂":
+			return "🦂 Not KV 🦂";
         case "🪶 Simurgh 🪶":
-            return "🪶 Simurgh the Feathered Fantastique 🪶";
+            return "🪶 The Simpsons 🪶";
         case "🩸 Bloodsucc 🩸":
             return "🩸 Succ me 🩸";
         case "🔥 Tiamat 🔥":
@@ -233,7 +232,7 @@ function aprilFools(monsterName){
         case "🧊 Jormzhugand 🧊":
             return "🧊 Stupid gosh darn heckin dragon 🧊";
         case "💜 Vrtra Vanquishers 💜":
-            return "💜  💜";
+            return "💜 Fartra Fartquisher 💜";
     }
 }
 
