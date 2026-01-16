@@ -19,7 +19,6 @@ const data = new SlashCommandBuilder()
 				{ name: '🧊 Jormzhugand 🧊', value: '🧊 Jormzhugand 🧊' },
 				{ name: '🦀 King Crab 🦀', value: '🦀 King Crab 🦀' },
 				{ name: '🦂 King Vinegarroon 🦂', value: '🦂 King Vinegarroon 🦂' },
-				{ name: '🦂 Serket 🦂', value: '🦂 Serket 🦂' },
 				{ name: '⚔️ Shikigami Weapon ⚔️', value: '⚔️ Shikigami Weapon ⚔️' },
 				{ name: '🪶 Simurgh 🪶', value: '🪶 Simurgh 🪶' },
 				{ name: '🔥 Tiamat 🔥', value: '🔥 Tiamat 🔥' },
@@ -221,8 +220,6 @@ function aprilFools(monsterName){
             return "⚔️ SHIKISHIMA WEAPON LOL!!! get it? <@209114565601001472> (lmao) <call4> ⚔️";
 		case "🦂 King Vinegarroon 🦂":
 			return "🦂 Serkets Cousin 🦂";
-		case "🦂 Serket 🦂":
-			return "🦂 Not KV 🦂";
         case "🪶 Simurgh 🪶":
             return "🪶 The Simpsons 🪶";
         case "🩸 Bloodsucc 🩸":
