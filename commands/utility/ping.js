@@ -137,16 +137,19 @@ async function updateRsvpFile(monsters) {
     try {
         const lines = [];
 
-        monsters.forEach(monster => {
-            if (monster.windows && monster.windowTime) {
-                const cleanName = monster.name.replace(/[^\w\s]/gu, '').trim();
+		monsters.forEach(monster => {
+			if (monster.windows && monster.windowTime) {
+				const cleanName = monster.name.replace(/[^\w\s]/gu, '').trim();
 
-                for (let i = 1; i <= monster.windows; i++) {
-                    const windowEpoch = monster.respawnTimeMinEpoch + (i * monster.windowTime);
-                    lines.push(`${cleanName} (${i}/${monster.windows})|||${monster.respawnTimeMinEpoch}|||${windowEpoch}|||${cleanName}`);
-                }
-            }
-        });
+				for (let i = 1; i <= monster.windows; i++) {
+					const windowEpoch = monster.respawnTimeMinEpoch + (i * monster.windowTime);
+					const label = monster.windows === 1 
+						? cleanName 
+						: `${cleanName} (${i}/${monster.windows})`;
+					lines.push(`${label}|||${monster.respawnTimeMinEpoch}|||${windowEpoch}|||${cleanName}`);
+				}
+			}
+		});
 
         await fs.writeFile(rsvpPath, lines.join('\n'), 'utf8');
         console.log("RSVP file updated successfully!");
