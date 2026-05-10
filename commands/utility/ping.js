@@ -2,6 +2,7 @@ const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
 const moment = require('moment-timezone');
 const fs = require('fs').promises; // Use promises version of fs
 const path = './tods.json';
+const rsvpPath = '../var/www/html/timers';
 const { channelId, messageId, roleName } = require('../../config.json');
 
 const data = new SlashCommandBuilder()
@@ -126,9 +127,35 @@ async function updateTod(monsterUpdate) {
             }
         });
 
+		await updateRsvpFile();
+	
         // Write the updated JSON back to the file
-        await fs.writeFile(path, JSON.stringify(monsters, null, 4), 'utf8');
+        await fs.writeFile(rsvpPath, JSON.stringify(monsters, null, 4), 'utf8');
         console.log("Monster updated successfully!");
+    } catch (err) {
+        console.error("Error:", err);
+    }
+}
+
+async function updateRsvpFile() {
+    try {
+        const data = await fs.readFile(path, 'utf8');
+        const monsters = JSON.parse(data);
+        const lines = [];
+
+        monsters.forEach(monster => {
+            if (monster.windows && monster.windowTime) {
+                const cleanName = monster.name.replace(/[^\w\s]/gu, '').trim();
+
+                for (let i = 1; i <= monster.windows; i++) {
+                    const windowEpoch = monster.respawnTimeMinEpoch + (i * monster.windowTime);
+                    lines.push(`${cleanName} (${i}/${monster.windows})|||${monster.respawnTimeMinEpoch}|||${windowEpoch}|||${cleanName}`);
+                }
+            }
+        });
+
+        await fs.writeFile(rsvpPath, lines.join('\n'), 'utf8');
+        console.log("RSVP file updated successfully!");
     } catch (err) {
         console.error("Error:", err);
     }
