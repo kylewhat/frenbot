@@ -104,43 +104,37 @@ module.exports = {
 
 async function updateTod(monsterUpdate) {
     try {
-        // Read the existing JSON file
         const data = await fs.readFile(path, 'utf8');
         const monsters = JSON.parse(data);
 
-        // Update each monster in the array
         monsters.forEach(monster => {
-            // Update the relevant monster by name
             if (monster.name === monsterUpdate.name) {
                 monster.epochTod = monsterUpdate.epochTod;
                 monster.lastDeathDay = monsterUpdate.lastDeathDay;
-
-                // Calculate respawnTimeMinEpoch
                 monster.respawnTimeMinEpoch = monster.epochTod + monster.respawnTimeMin;
 
-                // Calculate respawnTimeMaxEpoch
                 if (monster.respawnTimeMax) {
                     monster.respawnTimeMaxEpoch = monster.epochTod + monster.respawnTimeMax;
                 } else {
-                    monster.respawnTimeMaxEpoch = null; // Keep null if respawnTimeMax is null
+                    monster.respawnTimeMaxEpoch = null;
                 }
             }
         });
 
-		await updateRsvpFile();
-	
-        // Write the updated JSON back to the file
-        await fs.writeFile(rsvpPath, JSON.stringify(monsters, null, 4), 'utf8');
+        // Write updated monsters to tods.json first
+        await fs.writeFile(path, JSON.stringify(monsters, null, 4), 'utf8');
+
+        // Then generate rsvp file from the now-updated data
+        await updateRsvpFile(monsters);
+
         console.log("Monster updated successfully!");
     } catch (err) {
         console.error("Error:", err);
     }
 }
 
-async function updateRsvpFile() {
+async function updateRsvpFile(monsters) {
     try {
-        const data = await fs.readFile(path, 'utf8');
-        const monsters = JSON.parse(data);
         const lines = [];
 
         monsters.forEach(monster => {
