@@ -2,7 +2,7 @@ const { SlashCommandBuilder, PermissionFlagsBits } = require('discord.js');
 const moment = require('moment-timezone');
 const fs = require('fs').promises; // Use promises version of fs
 const path = './tods.json';
-const rsvpPath = '../var/www/html/timers';
+const rsvpPath = '../../../var/www/html/timers';
 const { channelId, messageId, roleName } = require('../../config.json');
 
 const data = new SlashCommandBuilder()
