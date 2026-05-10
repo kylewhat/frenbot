@@ -143,7 +143,7 @@ async function updateRsvpFile(monsters) {
 
 				if (monster.windows && monster.windowTime) {
 					for (let i = 1; i <= monster.windows; i++) {
-						const windowEpoch = monster.respawnTimeMinEpoch + (i * monster.windowTime);
+						const windowEpoch = monster.respawnTimeMinEpoch + ((i - 1) * monster.windowTime);
 						lines.push(`${cleanName} (${i}/${monster.windows})|||${monster.respawnTimeMinEpoch}|||${windowEpoch}|||${cleanName}`);
 					}
 				} else {
