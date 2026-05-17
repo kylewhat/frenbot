@@ -137,23 +137,26 @@ async function updateRsvpFile(monsters) {
     try {
         const lines = [];
 
-		monsters.forEach(monster => {
-			if (monster.respawnTimeMinEpoch) {
-				const cleanName = monster.name.replace(/[^\w\s]/gu, '').trim();
+        monsters.forEach(monster => {
+            if (monster.respawnTimeMinEpoch) {
+                const cleanName = monster.name.replace(/[^\w\s]/gu, '').trim();
+                const deathSuffix = monster.lastDeathDay !== null && monster.lastDeathDay !== undefined
+                    ? ` ${monster.lastDeathDay + 1}`
+                    : '';
+                const displayName = `${cleanName}${deathSuffix}`;
 
-				if (monster.windows && monster.windowTime) {
-					for (let i = 1; i <= monster.windows; i++) {
-						const windowEpoch = monster.respawnTimeMinEpoch + ((i - 1) * monster.windowTime);
-						lines.push(`${cleanName} (${i}/${monster.windows})|||${monster.respawnTimeMinEpoch}|||${windowEpoch}|||${cleanName}`);
-					}
-				} else {
-					lines.push(`${cleanName}|||${monster.respawnTimeMinEpoch}|||${monster.respawnTimeMinEpoch}|||${cleanName}`);
-				}
-			}
-		});
+                if (monster.windows && monster.windowTime) {
+                    for (let i = 1; i <= monster.windows; i++) {
+                        const windowEpoch = monster.respawnTimeMinEpoch + ((i - 1) * monster.windowTime);
+                        lines.push(`${displayName} (${i}/${monster.windows})|||${monster.respawnTimeMinEpoch}|||${windowEpoch}|||${cleanName}`);
+                    }
+                } else {
+                    lines.push(`${displayName}|||${monster.respawnTimeMinEpoch}|||${monster.respawnTimeMinEpoch}|||${cleanName}`);
+                }
+            }
+        });
 
         await fs.writeFile(rsvpPath, lines.join('\n'), 'utf8');
-        console.log("RSVP file updated successfully!");
     } catch (err) {
         console.error("Error:", err);
     }
