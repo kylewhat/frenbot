@@ -173,6 +173,7 @@ async function getMonsterData() {
 
         // Iterate over each monster and display the formatted information
         monsters.forEach(monster => {
+            if (monster.isHidden) return;
             let monsterName = monster.displayText || monster.name;
 			if (monster.lastDeathDay !== null && monster.lastDeathDay !== undefined) {
 				const displayDeathDay = ` Day ${monster.lastDeathDay + 1} `;
@@ -180,7 +181,7 @@ async function getMonsterData() {
 			}
 
 			if (monsterName === "⚔️ Shikigami Weapon ⚔️" && Math.random() < 0.05) {
-				monsterName = "⚔️ <@209114565601001472> Weapon ⚔️";
+				monsterName = "⚔️ Shikishima Weapon ⚔️";
 			}
 			
 			if (monsterName === "🐉 Fafnir 🐉" && Math.random() < 0.05) {
