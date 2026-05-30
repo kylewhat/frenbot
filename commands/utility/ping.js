@@ -3,7 +3,7 @@ const moment = require('moment-timezone');
 const fs = require('fs').promises; // Use promises version of fs
 const path = './tods.json';
 const rsvpPath = '../../../var/www/html/timers';
-const { channelId, messageId, roleName } = require('../../config.json');
+const { channelId, rsvpChannelId, rsvpMessageId, messageId, roleName } = require('../../config.json');
 
 const data = new SlashCommandBuilder()
 	.setName('add-tod')
@@ -98,12 +98,28 @@ module.exports = {
 			});
 			const result = await getMonsterData();
 			const msg = await client.channels.cache.get(channelId).messages.fetch(messageId);
+            
 			await msg.edit(result);
+
+            const rsvpMsg = await getRsvpMessage();
+			const rsvpMsg = await client.channels.cache.get(channelId).messages.fetch(messageId);
+			// await msg.edit(rsvpMsg);
+
 		} catch (err) {
 			console.error("Error:", err);
 		}
 	},
 };
+
+async function getRsvpMessage(){
+    try {
+        const data = await fs.readFile(rsvpPath, 'utf8');
+        return `\`\`\`${data}\`\`\``;
+    } catch (err) {
+        console.error("Error reading rsvp file:", err);
+        throw err;
+    }
+}
 
 async function updateTod(monsterUpdate) {
     try {
