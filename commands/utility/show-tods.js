@@ -44,6 +44,7 @@ async function getMonsterData() {
 
         // Iterate over each monster and display the formatted information
         monsters.forEach(monster => {
+            if(monster.isHidden) return;
             let monsterName = monster.displayText || monster.name;
             if (monster.lastDeathDay) {
                 const displayDeathDay = monster.lastDeathDay ? ` Day ${monster.lastDeathDay + 1} ` : "";

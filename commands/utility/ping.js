@@ -24,6 +24,9 @@ const data = new SlashCommandBuilder()
 				{ name: '🪶 Simurgh 🪶', value: '🪶 Simurgh 🪶' },
 				{ name: '🔥 Tiamat 🔥', value: '🔥 Tiamat 🔥' },
 				{ name: '💜 Vrtra 💜', value: '💜 Vrtra 💜' },
+				{ name: '🪴 Vivian 🪴', value: '🪴 Vivian 🪴' },
+				{ name: '💀 Xolotl 💀', value: '💀 Xolotl 💀' },
+				{ name: '🐙 Lord of Onzozo 🐙', value: '🐙 Lord of Onzozo 🐙' },
 	))
 	.addStringOption(option =>
 		option.setName('tod')
