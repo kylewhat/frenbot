@@ -101,25 +101,15 @@ module.exports = {
             
 			await msg.edit(result);
 
-            const rsvpResult = await getRsvpMessage();
+            const rsvpResult = await updateRsvpFile();
 			const rsvpMsg = await client.channels.cache.get(channelId).messages.fetch(messageId);
-			await msg.edit(rsvpMsg);
+			await msg.edit(`\`\`\`${rsvpResult}\`\`\``);
 
 		} catch (err) {
 			console.error("Error:", err);
 		}
 	},
 };
-
-async function getRsvpMessage(){
-    try {
-        const data = await fs.readFile(rsvpPath, 'utf8');
-        return `\`\`\`${data}\`\`\``;
-    } catch (err) {
-        console.error("Error reading rsvp file:", err);
-        throw err;
-    }
-}
 
 async function updateTod(monsterUpdate) {
     try {
@@ -176,6 +166,8 @@ async function updateRsvpFile(monsters) {
         });
 
         await fs.writeFile(rsvpPath, lines.join('\n'), 'utf8');
+
+        return lines.join('\n');
     } catch (err) {
         console.error("Error:", err);
     }
