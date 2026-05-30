@@ -101,9 +101,17 @@ module.exports = {
             
 			await msg.edit(result);
 
-            const rsvpResult = await getRsvpMessage();
-			const rsvpMsg = await client.channels.cache.get(channelId).messages.fetch(messageId);
-			await msg.edit(rsvpResult);
+            const rsvpContent = await getRsvpMessage();
+            if (rsvpContent) {
+                const rsvpMsg = await client.channels.cache.get(rsvpChannelId).messages.fetch(rsvpMessageId);
+                await rsvpMsg.edit({
+                    content: '',
+                    files: [{
+                        attachment: Buffer.from(rsvpContent, 'utf8'),
+                        name: 'timers'
+                    }]
+                });
+            }
 
 		} catch (err) {
 			console.error("Error:", err);
@@ -113,8 +121,7 @@ module.exports = {
 
 async function getRsvpMessage(){
     try {
-        const data = await fs.readFile(rsvpPath, 'utf8');
-        return `\`\`\`${data}\`\`\``;
+        return await fs.readFile(rsvpPath, 'utf8');
     } catch (err) {
         console.error("Error reading rsvp file:", err);
         throw err;
