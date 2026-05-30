@@ -103,7 +103,7 @@ module.exports = {
 
             const rsvpResult = await getRsvpMessage();
 			const rsvpMsg = await client.channels.cache.get(channelId).messages.fetch(messageId);
-			// await msg.edit(rsvpMsg);
+			await msg.edit(rsvpMsg);
 
 		} catch (err) {
 			console.error("Error:", err);
