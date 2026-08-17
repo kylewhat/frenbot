@@ -32,26 +32,6 @@
         "respawnTimeMaxEpoch": 1778475775
     },
     {
-        "name": "🐕 Cerberus 🐕🐕",
-        "epochTod": 1778392975,
-        "displayText": "",
-        "lastDeathDay": null,
-        "respawnTimeMin": 172800,
-        "respawnTimeMax": 266400,
-        "respawnTimeMinEpoch": 1778565775,
-        "respawnTimeMaxEpoch": 1778659375
-    },
-    {
-        "name": "🐲 Hydra 🐲🐲",
-        "epochTod": 1778392975,
-        "displayText": "",
-        "lastDeathDay": null,
-        "respawnTimeMin": 79200,
-        "respawnTimeMax": 82800,
-        "respawnTimeMinEpoch": 1778472175,
-        "respawnTimeMaxEpoch": 1778475775
-    },
-    {
         "name": "🦀 King Crab 🦀",
         "epochTod": 1778330005,
         "displayText": "",
@@ -60,6 +40,16 @@
         "respawnTimeMax": 82816,
         "respawnTimeMinEpoch": 1778409221,
         "respawnTimeMaxEpoch": 1778412821
+    },
+    {
+        "name": "⚔️ Shikigami Weapon ⚔️",
+        "epochTod": 1778374839,
+        "displayText": null,
+        "lastDeathDay": null,
+        "respawnTimeMin": 75616,
+        "respawnTimeMax": null,
+        "respawnTimeMinEpoch": 1778450455,
+        "respawnTimeMaxEpoch": null
     },
     {
         "name": "🦂 King Vinegarroon 🦂",
@@ -72,6 +62,26 @@
         "respawnTimeMaxEpoch": null
     },
     {
+        "name": "🪶 Simurgh 🪶",
+        "epochTod": 1778361432,
+        "displayText": null,
+        "lastDeathDay": null,
+        "respawnTimeMin": 79216,
+        "respawnTimeMax": 82816,
+        "respawnTimeMinEpoch": 1778440648,
+        "respawnTimeMaxEpoch": 1778444248
+    },
+    {
+        "name": "🩸 Bloodsucc 🩸",
+        "epochTod": 1778254714,
+        "displayText": "",
+        "lastDeathDay": null,
+        "respawnTimeMin": 255616,
+        "respawnTimeMax": null,
+        "respawnTimeMinEpoch": 1778510330,
+        "respawnTimeMaxEpoch": null
+    },
+    {
         "name": "🔥 Tiamat 🔥",
         "epochTod": 1778375462,
         "displayText": "🔥 Tiamat Trouncers 🔥",
@@ -80,5 +90,38 @@
         "respawnTimeMax": 388800,
         "respawnTimeMinEpoch": 1778677862,
         "respawnTimeMaxEpoch": 1778764262
+    },
+    {
+        "name": "🪴 Vivian 🪴",
+        "epochTod": 1778375462,
+        "displayText": null,
+        "lastDeathDay": null,
+        "respawnTimeMin": 57600,
+        "respawnTimeMax": null,
+        "respawnTimeMinEpoch": 1778677862,
+        "respawnTimeMaxEpoch": null,
+        "isHidden": true
+    },
+    {
+        "name": "💀 Xolotl 💀",
+        "epochTod": 1778375462,
+        "displayText": null,
+        "lastDeathDay": null,
+        "respawnTimeMin": 75600,
+        "respawnTimeMax": 86400,
+        "respawnTimeMinEpoch": 1778677862,
+        "respawnTimeMaxEpoch": null,
+        "isHidden": true
+    },
+    {
+        "name": "🐙 Lord of Onzozo 🐙",
+        "epochTod": 1778375462,
+        "displayText": null,
+        "lastDeathDay": null,
+        "respawnTimeMin": 57600,
+        "respawnTimeMax": null,
+        "respawnTimeMinEpoch": 1778677862,
+        "respawnTimeMaxEpoch": null,
+        "isHidden": true
     }
 ]

@@ -15,18 +15,13 @@ const data = new SlashCommandBuilder()
 			.addChoices(
 				{ name: '🐢 Adamantoise 🐢', value: '🐢 Adamantoise 🐢' },
 				{ name: '🌭 Behemoth 🌭', value: '🌭 Behemoth 🌭' },
-				{ name: '🩸 Bloodsucc 🩸', value: '🩸 Bloodsucc 🩸' },
+				{ name: '🐕 Cerberus 🐕🐕', value: '🐕 Cerberus 🐕🐕' },
 				{ name: '🐉 Fafnir 🐉', value: '🐉 Fafnir 🐉' },
-				{ name: '🧊 Jormzhugand 🧊', value: '🧊 Jormzhugand 🧊' },
+				{ name: '🐲 Hydra 🐲🐲', value: '🐲  Hydra 🐲🐲' },
 				{ name: '🦀 King Crab 🦀', value: '🦀 King Crab 🦀' },
 				{ name: '🦂 King Vinegarroon 🦂', value: '🦂 King Vinegarroon 🦂' },
-				{ name: '⚔️ Shikigami Weapon ⚔️', value: '⚔️ Shikigami Weapon ⚔️' },
-				{ name: '🪶 Simurgh 🪶', value: '🪶 Simurgh 🪶' },
 				{ name: '🔥 Tiamat 🔥', value: '🔥 Tiamat 🔥' },
-				{ name: '💜 Vrtra 💜', value: '💜 Vrtra 💜' },
-				{ name: '🪴 Vivian 🪴', value: '🪴 Vivian 🪴' },
-				{ name: '💀 Xolotl 💀', value: '💀 Xolotl 💀' },
-				{ name: '🐙 Lord of Onzozo 🐙', value: '🐙 Lord of Onzozo 🐙' },
+
 	))
 	.addStringOption(option =>
 		option.setName('tod')
@@ -85,7 +80,7 @@ module.exports = {
 
 		const tod = moment.tz(todValue, "MM/DD/YYYY hh:mm:ss A", "America/Chicago");
 		const deathDayDisplayText = deathDay !== null && deathDay !== undefined ? ` (day ${deathDay})` : '';
-		const randomEmojis = ['🍆', '🔥', '💋', '✅', '🚬', '🍑', '🥫', '🫄', '🤡', '🔪', '🔊', '👉👈', '👁️👄👁️', '💪', '🌈', '🥋', '🎮'];
+		const randomEmojis = ['🍆', '🔥', '💋', '✅', '🚬','🫄', '🤡', '🔪','👉👈', '👁️👄👁️', '💪', '🎮'];
 		const randomEmoji = randomEmojis[Math.floor(Math.random() * randomEmojis.length)];
 
 		await interaction.reply(`> ${randomEmoji} Updated ${monsterUpdated}${deathDayDisplayText} time of death: <t:${tod.unix()}:T>`);
