@@ -39,27 +39,33 @@
         "respawnTimeMin": 172800,
         "respawnTimeMax": 266400,
         "respawnTimeMinEpoch": 1778565775,
-        "respawnTimeMaxEpoch": 1778659375
+        "respawnTimeMaxEpoch": 1778659375,
+        "windows": 25,
+        "windowTime": 3600
     },
     {
         "name": "🐲 Hydra 🐲🐲",
         "epochTod": 1778392975,
         "displayText": "",
         "lastDeathDay": null,
-        "respawnTimeMin": 79200,
-        "respawnTimeMax": 82800,
+        "respawnTimeMin": 172800,
+        "respawnTimeMax": 266400,
         "respawnTimeMinEpoch": 1778472175,
-        "respawnTimeMaxEpoch": 1778475775
+        "respawnTimeMaxEpoch": 1778475775,
+        "windows": 25,
+        "windowTime": 3600
     },
     {
         "name": "🐩 Khimaira 🐩",
         "epochTod": 1778392975,
         "displayText": "",
         "lastDeathDay": null,
-        "respawnTimeMin": 79200,
-        "respawnTimeMax": 82800,
+        "respawnTimeMin": 172800,
+        "respawnTimeMax": 266400,
         "respawnTimeMinEpoch": 1778472175,
-        "respawnTimeMaxEpoch": 1778475775
+        "respawnTimeMaxEpoch": 1778475775,
+        "windows": 25,
+        "windowTime": 3600
     },
     {
         "name": "🦀 King Crab 🦀",
@@ -89,6 +95,8 @@
         "respawnTimeMin": 302400,
         "respawnTimeMax": 388800,
         "respawnTimeMinEpoch": 1778677862,
-        "respawnTimeMaxEpoch": 1778764262
+        "respawnTimeMaxEpoch": 1778764262,
+        "windows": 25,
+        "windowTime": 3600
     }
 ]
