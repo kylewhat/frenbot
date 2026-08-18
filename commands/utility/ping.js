@@ -17,7 +17,7 @@ const data = new SlashCommandBuilder()
 				{ name: '🌭 Behemoth 🌭', value: '🌭 Behemoth 🌭' },
 				{ name: '🐕 Cerberus 🐕🐕', value: '🐕 Cerberus 🐕🐕' },
 				{ name: '🐉 Fafnir 🐉', value: '🐉 Fafnir 🐉' },
-				{ name: '🐲 Hydra 🐲🐲', value: '🐲  Hydra 🐲🐲' },
+				{ name: '🐲 Hydra 🐲🐲', value: '🐲 Hydra 🐲🐲' },
 				{ name: '🐩 Khimaira 🐩', value: '🐩 Khimaira 🐩' },
 				{ name: '🦀 King Crab 🦀', value: '🦀 King Crab 🦀' },
 				{ name: '🦂 King Vinegarroon 🦂', value: '🦂 King Vinegarroon 🦂' },
