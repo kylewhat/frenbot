@@ -52,6 +52,16 @@
         "respawnTimeMaxEpoch": 1778475775
     },
     {
+        "name": "🐩 Khimaira 🐩",
+        "epochTod": 1778392975,
+        "displayText": "",
+        "lastDeathDay": null,
+        "respawnTimeMin": 79200,
+        "respawnTimeMax": 82800,
+        "respawnTimeMinEpoch": 1778472175,
+        "respawnTimeMaxEpoch": 1778475775
+    },
+    {
         "name": "🦀 King Crab 🦀",
         "epochTod": 1778330005,
         "displayText": "",
